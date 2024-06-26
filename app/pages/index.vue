@@ -20,6 +20,7 @@ async function submitTodo (){
 }
 
 async function deleTodo (id){
+  console.log('deleting new todo', id);
   await $fetch(`/api/todos/${id}`, {
     method: 'DELETE'
   })
@@ -57,7 +58,7 @@ async function deleTodo (id){
             color="red"
             variant="soft"
             size="2xs"
-            @click.prevent="deleTodo(todo.id)"
+            @click.prevent="deleTodo(Number(todo.id))"
           />
         </li>
       </ul>
