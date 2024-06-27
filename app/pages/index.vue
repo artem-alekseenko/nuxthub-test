@@ -30,6 +30,7 @@ async function deleTodo (id){
 
 <template>
   <main class="w-full h-screen flex items-center justify-center">
+    <h1>Test</h1>
     <UCard class="w-96" @submit.prevent="submitTodo">
       <template #header>
         <h3 class="text-lg font-semibold leading-6">Todo List</h3>
